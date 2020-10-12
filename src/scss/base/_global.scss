@@ -1,6 +1,48 @@
 html {
   --root-font-size: #{$root-font-size}px;
   font-size: #{$root-font-size}px;
+
+  @include low-desktop-min {
+    $min-screen-width: 1024;
+    $mid-screen-width: 1920;
+    $max-screen-width: 20000;
+
+    @include css-lock-full(
+        #{$min-screen-width * $root-font-size / $mid-screen-width},
+        $root-font-size,
+        #{$max-screen-width * $root-font-size / $mid-screen-width},
+        $min-screen-width,
+        $mid-screen-width,
+        $max-screen-width
+    );
+  }
+
+  @include tablet-only {
+    $mid-screen-width: 768;
+    $max-screen-width: 1023;
+
+    @include css-lock(
+        $root-font-size,
+        #{$root-font-size * ($max-screen-width / $mid-screen-width)},
+        $mid-screen-width,
+        $max-screen-width
+    );
+  }
+
+  @include mobile {
+    $min-screen-width: 320;
+    $mid-screen-width: 360;
+    $max-screen-width: 767;
+
+    @include css-lock-full(
+        #{$min-screen-width * $root-font-size / $mid-screen-width},
+        $root-font-size,
+        #{$max-screen-width * $root-font-size / $mid-screen-width},
+        $min-screen-width,
+        $mid-screen-width,
+        $max-screen-width
+    );
+  }
 }
 
 body {
@@ -31,4 +73,8 @@ body {
   &:not(._active) {
     display: none;
   }
+}
+
+.g-font-alt {
+  font-family: $font-alt;
 }

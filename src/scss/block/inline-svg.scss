@@ -49,4 +49,28 @@ $b: '.inline-svg';
   &-rotate_device {
     @include aspect-ratio(45, 45)
   }
+
+  &-logo {
+    @include aspect-ratio(254, 21)
+  }
+
+  &-search {
+    @include aspect-ratio(14, 14)
+  }
+
+  &-cart {
+    @include aspect-ratio(14, 14)
+  }
+
+  &-line {
+    @include aspect-ratio(353, 476)
+  }
+
+  &-polygon-arrow {
+    @include aspect-ratio(80, 70)
+  }
+
+  &-polygon-arrow {
+    @include aspect-ratio(199, 183)
+  }
 }

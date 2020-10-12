@@ -1,0 +1,26 @@
+$b: '.action';
+
+#{$b} {
+  @include clickable();
+  width: rem(199px);
+
+  svg {
+    overflow: visible;
+  }
+
+  path {
+    transition: $g-transition;
+  }
+
+  &:hover {
+    path {
+      &:last-child {
+        transform: translateX(rem(10px));
+      }
+    }
+  }
+
+  svg {
+    fill: none;
+  }
+}

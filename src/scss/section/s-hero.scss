@@ -1,0 +1,102 @@
+$b: '.s-hero';
+
+#{$b} {
+  background-color: $bg-alt;
+  margin-bottom: rem(60px);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__scene {
+    position: relative;
+    width: rem(638px);
+    height: rem(505px);
+
+    &-title {
+      position: absolute;
+      z-index: 3;
+      font-size: rem(61px);
+      line-height: rem(77px);
+      letter-spacing: 0.07em;
+      color: $dark;
+      right: 0 !important;
+      top: rem(30px) !important;
+      left: auto!important;
+      margin-left: auto;
+      width: rem(408px);
+    }
+
+    &-main {
+      position: absolute;
+      z-index: 2;
+      left: rem(113px) !important;
+      top: 0 !important;
+    }
+
+    &-line {
+      position: absolute;
+      width: rem(353px);
+      left: rem(51px) !important;
+      top: 0 !important;
+    }
+
+    &-logo {
+      position: absolute;
+      left: 0 !important;
+      bottom: 0 !important;
+      top: auto !important;
+      width: rem(260px);
+      height: rem(260px);
+    }
+  }
+
+  &__bg {
+    position: relative;
+    width: rem(701px);
+    height: rem(830px);
+    margin-right: rem(-120px);
+    margin-bottom: rem(-60px);
+
+    &-img {
+      @include bg-cover();
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__action {
+    position: absolute;
+    bottom: rem(130px);
+    left: rem(-235px);
+    display: flex;
+    align-items: center;
+    font-size: rem(14px);
+    line-height: rem(17px);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    &:hover {
+      path {
+        &:first-child {
+          transform: translateX(rem(10px));
+        }
+      }
+    }
+
+    &-icon {
+      width: rem(80px);
+      margin-left: rem(17px);
+
+      svg {
+        fill: none;
+
+        path {
+          transition: $g-transition;
+        }
+      }
+    }
+  }
+}

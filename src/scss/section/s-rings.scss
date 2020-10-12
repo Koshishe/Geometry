@@ -1,0 +1,75 @@
+$b: '.s-rings';
+
+#{$b} {
+  padding-top: rem(198px);
+  padding-bottom: rem(254px);
+
+  &__container {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__preview {
+    position: relative;
+    padding-top: rem(55px);
+    padding-left: rem(57px);
+    margin-right: rem(75px);
+
+    &-bg {
+      position: absolute;
+      background-color: $bg-alt;
+      width: rem(367px);
+      height: rem(511px);
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    &-img {
+      @include bg-cover();
+      width: rem(438px);
+      height: rem(530px);
+    }
+  }
+
+  &__info {
+    width: rem(358px);
+  }
+
+  &__title {
+    font-size: rem(60px);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: $dark;
+  }
+
+  &__action {
+    margin-left: auto;
+    margin-top: rem(-40px);
+  }
+
+  &__decor {
+    position: relative;
+    margin-left: rem(123px);
+    width: rem(401px);
+    height: rem(487px);
+    align-self: flex-start;
+
+    &-img {
+      @include bg-cover();
+      width: 100%;
+      height: 100%;
+    }
+
+    &-circle {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: rem(291px);
+      height: rem(291px);
+      z-index: -1;
+      animation: spin 20s infinite linear;
+    }
+  }
+}

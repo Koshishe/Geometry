@@ -1,5 +1,51 @@
 $b: '.site-header';
 
 #{$b} {
-  //
+  background-color: $bg-alt;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: rem(28px);
+    padding-bottom: rem(19px);
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav {
+    margin-left: rem(266px);
+    display: flex;
+    align-items: center;
+
+    &-item {
+      text-transform: uppercase;
+      font-size: rem(10px);
+      line-height: rem(12px);
+
+      &:not(:last-child) {
+        margin-right: rem(42px);
+      }
+    }
+  }
+
+  &__logo {
+    width: rem(254px);
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: rem(14px);
+
+    &:not(last-child) {
+      margin-right: rem(17px);
+    }
+  }
 }

@@ -1,3 +1,23 @@
 <header class="site-header">
-
+    <div class="site-header__container l-outer-width l-inner-padding">
+        <div class="site-header__block">
+            <div class="site-header__logo">
+                {{ inc.inlineSvg('logo') }}
+            </div>
+            <div class="site-header__nav">
+                <a href="#" class="site-header__nav-item">каталог</a>
+                <a href="#" class="site-header__nav-item">lookbook</a>
+                <a href="#" class="site-header__nav-item">инфо</a>
+                <a href="#" class="site-header__nav-item">контакты</a>
+            </div>
+        </div>
+        <div class="site-header__icons">
+            <a href="#" class="site-header__icon">
+                {{ inc.inlineSvg('search') }}
+            </a>
+            <a href="#" class="site-header__icon">
+                {{ inc.inlineSvg('cart') }}
+            </a>
+        </div>
+    </div>
 </header>
