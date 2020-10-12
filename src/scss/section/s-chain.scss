@@ -1,0 +1,75 @@
+$b: '.s-chain';
+
+#{$b} {
+  padding-bottom: rem(217px);
+
+  &__container {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__preview {
+    position: relative;
+    padding-top: rem(193px);
+    padding-left: rem(46px);
+    margin-right: rem(86px);
+
+    &-bg {
+      position: absolute;
+      background-color: $bg-alt;
+      width: rem(367px);
+      height: rem(511px);
+      top: rem(140px) !important;
+      left: 0!important;
+      z-index: -1;
+    }
+
+    &-img {
+      @include bg-cover();
+      width: rem(438px);
+      height: rem(530px);
+    }
+  }
+
+  &__info {
+    width: rem(438px);
+  }
+
+  &__title {
+    font-size: rem(60px);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: $dark;
+  }
+
+  &__action {
+    margin-left: auto;
+    margin-top: rem(-40px);
+  }
+
+  &__decor {
+    position: relative;
+    margin-left: rem(42px);
+    width: rem(280px);
+    height: rem(329px);
+    align-self: flex-start;
+    margin-top: rem(136px);
+
+    &-img {
+      @include bg-cover();
+      width: 100%;
+      height: 100%;
+    }
+
+    &-circle {
+      position: absolute;
+      top: rem(-140px);
+      left: rem(-141px);
+      width: rem(291px);
+      height: rem(291px);
+      z-index: -1;
+      animation: spin 20s infinite linear;
+    }
+  }
+}

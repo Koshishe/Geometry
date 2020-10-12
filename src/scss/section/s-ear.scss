@@ -1,5 +1,68 @@
 $b: '.s-ear';
 
 #{$b} {
-  //
+  padding-bottom: rem(113px);
+
+  &__container {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__decor {
+    margin-right: rem(121px);
+    padding-left: rem(46px);
+    align-self: flex-start;
+
+    &-img {
+      @include bg-cover();
+      width: rem(279px);
+      height: rem(328px);
+    }
+
+    &-line {
+      width: rem(279px);
+      z-index: -1;
+    }
+  }
+
+  &__info {
+    width: rem(325px);
+  }
+
+  &__title {
+    font-size: rem(60px);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: $dark;
+  }
+
+  &__action {
+    margin-left: auto;
+    margin-top: rem(-40px);
+  }
+
+  &__preview {
+    position: relative;
+    padding-top: rem(55px);
+    padding-right: rem(57px);
+    margin-left: rem(110px);
+
+    &-bg {
+      position: absolute;
+      background-color: $lightgray;
+      width: rem(367px);
+      height: rem(511px);
+      top: 0 !important;
+      right: 0 !important;
+      left: auto !important;
+      z-index: -1;
+    }
+
+    &-img {
+      @include bg-cover();
+      width: rem(437px);
+      height: rem(530px);
+    }
+  }
 }
